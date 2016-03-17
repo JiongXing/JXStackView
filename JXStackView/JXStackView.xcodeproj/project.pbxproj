@@ -14,6 +14,7 @@
 		94E7543E1C9A626A0061FA5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E7543D1C9A626A0061FA5D /* Assets.xcassets */; };
 		94E754411C9A626A0061FA5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E7543F1C9A626A0061FA5D /* LaunchScreen.storyboard */; };
 		94E7544D1C9A630D0061FA5D /* JXVerticalStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E7544C1C9A630D0061FA5D /* JXVerticalStackView.m */; };
+		94E7545D1C9AAF730061FA5D /* JXHorizontalStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E7545C1C9AAF730061FA5D /* JXHorizontalStackView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		94E754421C9A626A0061FA5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94E7544B1C9A630D0061FA5D /* JXVerticalStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXVerticalStackView.h; sourceTree = "<group>"; };
 		94E7544C1C9A630D0061FA5D /* JXVerticalStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXVerticalStackView.m; sourceTree = "<group>"; };
+		94E7545B1C9AAF730061FA5D /* JXHorizontalStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHorizontalStackView.h; sourceTree = "<group>"; };
+		94E7545C1C9AAF730061FA5D /* JXHorizontalStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHorizontalStackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				94E754381C9A626A0061FA5D /* ViewController.m */,
 				94E7544B1C9A630D0061FA5D /* JXVerticalStackView.h */,
 				94E7544C1C9A630D0061FA5D /* JXVerticalStackView.m */,
+				94E7545B1C9AAF730061FA5D /* JXHorizontalStackView.h */,
+				94E7545C1C9AAF730061FA5D /* JXHorizontalStackView.m */,
 				94E7543A1C9A626A0061FA5D /* Main.storyboard */,
 				94E7543D1C9A626A0061FA5D /* Assets.xcassets */,
 				94E7543F1C9A626A0061FA5D /* LaunchScreen.storyboard */,
@@ -154,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E7545D1C9AAF730061FA5D /* JXHorizontalStackView.m in Sources */,
 				94E7544D1C9A630D0061FA5D /* JXVerticalStackView.m in Sources */,
 				94E754391C9A626A0061FA5D /* ViewController.m in Sources */,
 				94E754361C9A626A0061FA5D /* AppDelegate.m in Sources */,
@@ -304,6 +310,7 @@
 				94E754471C9A626A0061FA5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
