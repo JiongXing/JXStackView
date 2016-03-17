@@ -1,42 +1,47 @@
 # JXStackView
 栈式布局容器
 
+### 头文件
+typedef NS_ENUM(NSUInteger, JXVerticalStackViewAlignment) {
+JXVerticalStackViewAlignmentFill = 0, // 拉伸以充满整行
+JXVerticalStackViewAlignmentLeft, // 左对齐
+JXVerticalStackViewAlignmentCenter, // 居中
+JXVerticalStackViewAlignmentRight, // 右对齐
+};
+
+@interface JXVerticalStackView : UIView
+
+/// 左右对齐方式
+@property (nonatomic, assign) JXVerticalStackViewAlignment alignment;
+
+/// 间隔
+@property (nonatomic, assign) CGFloat contentSpacing;
+
+/// Size变化后回调
+@property (nonatomic, copy) void (^didChangeSize)(CGSize size);
+
+@end
+
 ### 使用示例
-- (void)viewDidLoad
+self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+[self.view addSubview:self.scrollView];
+
+self.vStackView = [[JXVerticalStackView alloc] init];
+[self.scrollView addSubview:self.vStackView];
+
+// 高度初始化可为0，会自动计算；宽度需传值
+self.vStackView.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, 0);
+
+// size变化后回调
+__weak typeof(self) weakSelf = self;
+[self.vStackView setDidChangeSize:^(CGSize size) {
+weakSelf.scrollView.contentSize = size;
+}];
+
+// 添加子view
+for (NSInteger index = 0; index < 5; index ++)
 {
-    [super viewDidLoad];
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(onRightItem)];
-
-    self.vStackView = [[JXVerticalStackView alloc] initWithFrame:CGRectMake(10, 64 + 10, 300, 200)];
-    [self.view addSubview:self.vStackView];
-
-    for (NSInteger index = 0; index < 3; index ++)
-    {
-        [self.vStackView addSubview:[self generateRandomView]];
-    }
-}
-
-- (void)onRightItem
-{
-    [self.vStackView addSubview:[self generateRandomView]];
-}
-
-- (UIView *)generateRandomView
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, arc4random_uniform(50) + 30)];
-    view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255) / 255.0 green:arc4random_uniform(255) / 255.0 blue:arc4random_uniform(255) / 255.0 alpha:1.0];
-
-    view.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
-    [view addGestureRecognizer:tap];
-    return view;
-}
-
-- (void)onTap:(UITapGestureRecognizer *)tap
-{
-    UIView *view = tap.view;
-    [view removeFromSuperview];
+[self.vStackView addSubview:[self generateRandomView]];
 }
 
 ![image](https://github.com/JiongXing/JXStackView/raw/master/screenshots/screenshots1.png)

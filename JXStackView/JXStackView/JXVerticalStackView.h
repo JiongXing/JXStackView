@@ -23,4 +23,7 @@ typedef NS_ENUM(NSUInteger, JXVerticalStackViewAlignment) {
 /// 间隔
 @property (nonatomic, assign) CGFloat contentSpacing;
 
+/// Size变化后回调
+@property (nonatomic, copy) void (^didChangeSize)(CGSize size);
+
 @end

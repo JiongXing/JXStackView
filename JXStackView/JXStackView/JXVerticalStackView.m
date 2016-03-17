@@ -69,6 +69,10 @@
     if (update)
     {
         self.frame = (CGRect){self.frame.origin, result};
+        if (self.didChangeSize)
+        {
+            self.didChangeSize(result);
+        }
     }
     return result;
 }

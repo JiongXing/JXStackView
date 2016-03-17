@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) JXVerticalStackView *vStackView;
 
 @end
@@ -23,10 +24,23 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(onRightItem)];
     
-    self.vStackView = [[JXVerticalStackView alloc] initWithFrame:CGRectMake(10, 64 + 10, 300, 200)];
-    [self.view addSubview:self.vStackView];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.scrollView];
     
-    for (NSInteger index = 0; index < 3; index ++)
+    self.vStackView = [[JXVerticalStackView alloc] init];
+    [self.scrollView addSubview:self.vStackView];
+    
+    // 高度初始化可为0，会自动计算；宽度需传值
+    self.vStackView.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, 0);
+    
+    // size变化后回调
+    __weak typeof(self) weakSelf = self;
+    [self.vStackView setDidChangeSize:^(CGSize size) {
+        weakSelf.scrollView.contentSize = size;
+    }];
+    
+    // 添加子view
+    for (NSInteger index = 0; index < 5; index ++)
     {
         [self.vStackView addSubview:[self generateRandomView]];
     }
