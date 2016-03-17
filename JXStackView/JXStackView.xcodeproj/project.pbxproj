@@ -15,6 +15,7 @@
 		94E754411C9A626A0061FA5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E7543F1C9A626A0061FA5D /* LaunchScreen.storyboard */; };
 		94E7544D1C9A630D0061FA5D /* JXVerticalStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E7544C1C9A630D0061FA5D /* JXVerticalStackView.m */; };
 		94E7545D1C9AAF730061FA5D /* JXHorizontalStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E7545C1C9AAF730061FA5D /* JXHorizontalStackView.m */; };
+		94E754601C9AB6E90061FA5D /* JXStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E7545F1C9AB6E90061FA5D /* JXStackView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		94E7544C1C9A630D0061FA5D /* JXVerticalStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXVerticalStackView.m; sourceTree = "<group>"; };
 		94E7545B1C9AAF730061FA5D /* JXHorizontalStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHorizontalStackView.h; sourceTree = "<group>"; };
 		94E7545C1C9AAF730061FA5D /* JXHorizontalStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHorizontalStackView.m; sourceTree = "<group>"; };
+		94E7545E1C9AB6E90061FA5D /* JXStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXStackView.h; sourceTree = "<group>"; };
+		94E7545F1C9AB6E90061FA5D /* JXStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXStackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				94E754351C9A626A0061FA5D /* AppDelegate.m */,
 				94E754371C9A626A0061FA5D /* ViewController.h */,
 				94E754381C9A626A0061FA5D /* ViewController.m */,
+				94E7545E1C9AB6E90061FA5D /* JXStackView.h */,
+				94E7545F1C9AB6E90061FA5D /* JXStackView.m */,
 				94E7544B1C9A630D0061FA5D /* JXVerticalStackView.h */,
 				94E7544C1C9A630D0061FA5D /* JXVerticalStackView.m */,
 				94E7545B1C9AAF730061FA5D /* JXHorizontalStackView.h */,
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94E7545D1C9AAF730061FA5D /* JXHorizontalStackView.m in Sources */,
+				94E754601C9AB6E90061FA5D /* JXStackView.m in Sources */,
 				94E7544D1C9A630D0061FA5D /* JXVerticalStackView.m in Sources */,
 				94E754391C9A626A0061FA5D /* ViewController.m in Sources */,
 				94E754361C9A626A0061FA5D /* AppDelegate.m in Sources */,

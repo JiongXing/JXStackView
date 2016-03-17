@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"单击改变size，拖动删除";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(onRightItem)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(onLeftItem)];
@@ -102,16 +103,27 @@
 
 - (UIView *)generateRandomView
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, arc4random_uniform(50) + 30, arc4random_uniform(50) + 30)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, arc4random_uniform(60) + 30, arc4random_uniform(60) + 30)];
     view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255) / 255.0 green:arc4random_uniform(255) / 255.0 blue:arc4random_uniform(255) / 255.0 alpha:1.0];
     
     view.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
-    [view addGestureRecognizer:tap];
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onSingleTap:)];
+    [view addGestureRecognizer:singleTap];
+    
+    UIPanGestureRecognizer *panTap = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanTap:)];
+    [view addGestureRecognizer:panTap];
     return view;
 }
 
-- (void)onTap:(UITapGestureRecognizer *)tap
+- (void)onSingleTap:(UITapGestureRecognizer *)tap
+{
+    UIView *view = tap.view;
+    CGRect frame = view.frame;
+    frame.size = CGSizeMake(arc4random_uniform(60) + 30, arc4random_uniform(60) + 30);
+    view.frame = frame;
+}
+
+- (void)onPanTap:(UITapGestureRecognizer *)tap
 {
     UIView *view = tap.view;
     [view removeFromSuperview];

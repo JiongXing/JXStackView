@@ -10,19 +10,7 @@
 
 @implementation JXVerticalStackView
 
-- (void)setContentSpacing:(CGFloat)contentSpacing
-{
-    _contentSpacing = contentSpacing;
-    [self setNeedsLayout];
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self calculateContentSizeThatFits:self.frame.size andUpdateLayout:YES];
-}
-
-- (CGSize)calculateContentSizeThatFits:(CGSize)size andUpdateLayout:(BOOL)update
+- (CGSize)calcSizeThatFits:(CGSize)size needLayoutUpdate:(BOOL)update
 {
     CGSize result = CGSizeMake(size.width, 0);
     for (UIView *view in self.subviews)
@@ -77,16 +65,5 @@
     return result;
 }
 
-- (CGSize)sizeThatFits:(CGSize)size
-{
-    return [self calculateContentSizeThatFits:size andUpdateLayout:NO];
-}
-
-- (void)sizeToFit
-{
-    CGRect frame = self.frame;
-    frame.size = [self calculateContentSizeThatFits:frame.size andUpdateLayout:YES];
-    self.frame = frame;
-}
 
 @end

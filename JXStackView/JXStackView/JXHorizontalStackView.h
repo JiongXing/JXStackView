@@ -6,7 +6,7 @@
 //  Copyright © 2016年 jiongxing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "JXStackView.h"
 
 typedef NS_ENUM(NSUInteger, JXHorizontalStackViewAlignment) {
     JXHorizontalStackViewAlignmentFill = 0, // 拉伸以充满整行
@@ -15,15 +15,9 @@ typedef NS_ENUM(NSUInteger, JXHorizontalStackViewAlignment) {
     JXHorizontalStackViewAlignmentBottom, // 底部对齐
 };
 
-@interface JXHorizontalStackView : UIView
+@interface JXHorizontalStackView : JXStackView
 
 /// 上下对齐方式
 @property (nonatomic, assign) JXHorizontalStackViewAlignment alignment;
-
-/// 间隔
-@property (nonatomic, assign) CGFloat contentSpacing;
-
-/// Size变化后回调
-@property (nonatomic, copy) void (^didChangeSize)(CGSize size);
 
 @end
