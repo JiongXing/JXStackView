@@ -1,9 +1,9 @@
 //
 //  JXVerticalStackView.m
-//  JXStackView
+//  JXStackViewDemo
 //
-//  Created by JiongXing on 16/3/17.
-//  Copyright © 2016年 jiongxing. All rights reserved.
+//  Created by JiongXing on 16/3/18.
+//  Copyright © 2016年 LiangJiongXing. All rights reserved.
 //
 
 #import "JXVerticalStackView.h"
@@ -64,6 +64,5 @@
     }
     return result;
 }
-
 
 @end

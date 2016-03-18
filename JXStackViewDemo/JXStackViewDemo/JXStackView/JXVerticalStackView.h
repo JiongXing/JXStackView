@@ -1,12 +1,12 @@
 //
 //  JXVerticalStackView.h
-//  JXStackView
+//  JXStackViewDemo
 //
-//  Created by JiongXing on 16/3/17.
-//  Copyright © 2016年 jiongxing. All rights reserved.
+//  Created by JiongXing on 16/3/18.
+//  Copyright © 2016年 LiangJiongXing. All rights reserved.
 //
 
-#import "JXStackView.h"
+#import "JXBaseStackView.h"
 
 typedef NS_ENUM(NSUInteger, JXVerticalStackViewAlignment) {
     JXVerticalStackViewAlignmentFill = 0, // 拉伸以充满整行
@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, JXVerticalStackViewAlignment) {
     JXVerticalStackViewAlignmentRight, // 右对齐
 };
 
-@interface JXVerticalStackView : JXStackView
+@interface JXVerticalStackView : JXBaseStackView
 
 /// 左右对齐方式
 @property (nonatomic, assign) JXVerticalStackViewAlignment alignment;

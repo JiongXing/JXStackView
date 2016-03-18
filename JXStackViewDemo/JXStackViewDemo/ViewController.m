@@ -1,14 +1,13 @@
 //
 //  ViewController.m
-//  JXStackView
+//  JXStackViewDemo
 //
-//  Created by JiongXing on 16/3/17.
-//  Copyright © 2016年 jiongxing. All rights reserved.
+//  Created by JiongXing on 16/3/18.
+//  Copyright © 2016年 LiangJiongXing. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "JXVerticalStackView.h"
-#import "JXHorizontalStackView.h"
+#import "JXStackView.h"
 
 @interface ViewController ()
 
@@ -79,7 +78,7 @@
     self.hStackView.alignment = JXHorizontalStackViewAlignmentCenter;
     
     // 切换
-    self.vScrollView.hidden = YES;
+    self.vScrollView.hidden = NO;
     self.hScrollView.hidden = !self.vScrollView.hidden;
 }
 

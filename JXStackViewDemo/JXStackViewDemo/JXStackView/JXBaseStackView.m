@@ -1,14 +1,14 @@
 //
-//  JXStackView.m
-//  JXStackView
+//  JXBaseStackView.m
+//  JXStackViewDemo
 //
-//  Created by JiongXing on 16/3/17.
-//  Copyright © 2016年 jiongxing. All rights reserved.
+//  Created by JiongXing on 16/3/18.
+//  Copyright © 2016年 LiangJiongXing. All rights reserved.
 //
 
-#import "JXStackView.h"
+#import "JXBaseStackView.h"
 
-@implementation JXStackView
+@implementation JXBaseStackView
 
 - (void)setContentSpacing:(CGFloat)contentSpacing
 {

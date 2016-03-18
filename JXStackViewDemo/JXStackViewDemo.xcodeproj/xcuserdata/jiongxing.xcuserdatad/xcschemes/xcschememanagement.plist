@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>JXStackView.xcscheme</key>
+		<key>JXStackViewDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>94E7542D1C9A626A0061FA5D</key>
+		<key>942139891C9BA1F100404105</key>
 		<dict>
 			<key>primary</key>
 			<true/>

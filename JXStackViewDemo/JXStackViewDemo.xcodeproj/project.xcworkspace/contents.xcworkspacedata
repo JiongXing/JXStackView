@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:JXStackView.xcodeproj">
+      location = "self:JXStackViewDemo.xcodeproj">
    </FileRef>
 </Workspace>

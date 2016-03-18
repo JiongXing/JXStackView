@@ -1,14 +1,14 @@
 //
-//  JXStackView.h
-//  JXStackView
+//  JXBaseStackView.h
+//  JXStackViewDemo
 //
-//  Created by JiongXing on 16/3/17.
-//  Copyright © 2016年 jiongxing. All rights reserved.
+//  Created by JiongXing on 16/3/18.
+//  Copyright © 2016年 LiangJiongXing. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface JXStackView : UIView
+@interface JXBaseStackView : UIView
 
 /// 间隔
 @property (nonatomic, assign) CGFloat contentSpacing;
