@@ -1,8 +1,7 @@
 # JXStackView
 ##栈式布局容器
-===
 ### 竖直布局
-```cpp
+```objective-c
 #import "JXStackView.h"
 
 @interface ViewController ()
