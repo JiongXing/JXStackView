@@ -2,7 +2,7 @@
 ##栈式布局容器-管理线性视图排列
 - 用Frame实现的控件，不使用约束。支持水平和竖直两种视图排列。
 
-![JXStackView.gif](https://github.com/JiongXing/JXStackView/raw/master/JXStackView.gif)
+![JXStackView.gif](https://github.com/JiongXing/JXStackView/raw/master/screenshots/JXStackView.gif)
 
 - 简单使用
 ```objc
